@@ -10,6 +10,7 @@ public class charMove : MonoBehaviour {
     public float hSpeed;
     public int fric;
     public int maxS;
+    private bool doubleJump;
 
     //Player grounded variables
     public Transform groundCheck;
@@ -17,6 +18,7 @@ public class charMove : MonoBehaviour {
     public LayerMask whatIsGround;
     private bool grounded;
 
+  
 	// Use this for initialization
 	void Start () {
 		
@@ -34,13 +36,27 @@ public class charMove : MonoBehaviour {
         if(Input.GetKeyDown (KeyCode.Space)&& grounded) {
             Jump();
         }
+        //Double Jump code
+        if (grounded)
+            doubleJump = false;
+
+        if(Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded)
+        {
+            Jump();
+            doubleJump = true;
+        }
+
+       
         if(Input.GetKey (KeyCode.D)){
             hSpeed += MoveSpeed;
+
         }
         if (Input.GetKey(KeyCode.A))
         {
             hSpeed -= MoveSpeed;
+           
         }
+       
         if (hSpeed != 0)
         {
             if (hSpeed >= fric)
@@ -56,6 +72,7 @@ public class charMove : MonoBehaviour {
                 hSpeed = 0;
             }
         }
+       
         if (hSpeed > maxS)
         {
             hSpeed = maxS;
