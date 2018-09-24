@@ -30,17 +30,19 @@ public class charMove : MonoBehaviour {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 	}
 
-	// Update is called once per frame
-	void Update () {
-		//This code makes the character jump
-        if(Input.GetKeyDown (KeyCode.Space)&& grounded) {
+    // Update is called once per frame
+    void Update()
+    {
+        //This code makes the character jump
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
             Jump();
         }
         //Double Jump code
         if (grounded)
             doubleJump = false;
 
-        if(Input.GetKeyDown (KeyCode.Space)&& !doubleJump && !grounded)
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
         {
             Jump();
             doubleJump = true;
