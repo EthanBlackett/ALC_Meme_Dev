@@ -5,12 +5,12 @@ using UnityEngine;
 public class CheckPoints : MonoBehaviour
 {
 
-    public LevelManager levelManager;
+    public levelManager levelManager;
 
     // Use this for initialization
     void Start()
     {
-        levelManager = FindObjectOfType<LevelManager>();
+        levelManager = FindObjectOfType<levelManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class CheckPoints : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.name == "PC") {
-            levelManager.currentCheckpoint = gameObject;
+            levelManager.currentCheckPoint = gameObject;
             Debug.Log("Activated Checkpoint:" + transform.position);
         }
         
