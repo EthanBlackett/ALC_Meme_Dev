@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectile : MonoBehaviour {
+public class shooty : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Transform FirePoint;
+    public GameObject Projectile;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightControl))
+        {
+            Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
+        }
+    }
 }
