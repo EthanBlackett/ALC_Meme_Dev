@@ -5,8 +5,7 @@ using UnityEngine;
 public class projectile : MonoBehaviour
 {
 
-    public class Projectile : MonoBehaviour
-    {
+   
         public float Speed;
 
         public Rigidbody2D PC;
@@ -16,7 +15,6 @@ public class projectile : MonoBehaviour
         public GameObject ProjectileParticle;
 
         public int PointsForKill;
-    }
 
     // Use this for initialization
     void Start()
@@ -28,6 +26,8 @@ public class projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+
+	
 }

@@ -11,9 +11,19 @@ public class shooty : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightControl))
+        if (Input.GetKey(KeyCode.RightControl))
         {
             Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            GameObject tempDie = other.GetComponent<GameObject>();
+            GameObject.Destroy(tempDie);
+        }
+    }
+
 }
