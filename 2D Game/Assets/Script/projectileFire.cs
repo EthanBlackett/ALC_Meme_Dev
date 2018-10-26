@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectile : MonoBehaviour
+public class projectileFire : MonoBehaviour
 {
-
+    public GameObject Projectile;
+    public Transform FirePoint;
    
         public float Speed;
 
@@ -26,7 +27,11 @@ public class projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
+            if (Input.GetKey(KeyCode.RightControl))
+            {
+                Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
+            }
     }
 
 	
