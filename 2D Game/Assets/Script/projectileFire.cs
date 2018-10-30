@@ -33,6 +33,5 @@ public class projectileFire : MonoBehaviour
                 Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
             }
     }
-
 	
 }
