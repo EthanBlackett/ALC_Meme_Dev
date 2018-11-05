@@ -16,7 +16,7 @@ public class projectileScript : MonoBehaviour
         if (other.tag == "Enemy")
         {
             GameObject tempDie = other.GetComponent<GameObject>();
-            GameObject.Destroy(tempDie);
+            Object.Destroy(other);
         }
     }
 
