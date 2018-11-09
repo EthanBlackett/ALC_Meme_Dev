@@ -1,21 +1,25 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
-public class killPlayer : MonoBehaviour {
+public class KillPlayer : MonoBehaviour
+{
+
 
     public levelManager levelManager;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         levelManager = FindObjectOfType<levelManager>();
-	}
-	
-	// Update is called once per frame
-	void OnTriggerEnter2D(Collider2D other) {
-        if(other.name == "PC") 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "PC")
         {
             levelManager.RespawnPlayer();
         }
-	}
+
+    }
 }
