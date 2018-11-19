@@ -9,6 +9,8 @@ public class projectileFire : MonoBehaviour
    
         public float Speed;
 
+    public float Timeout;
+
         public Rigidbody2D PC;
 
         public GameObject EnemyDeath;
@@ -28,7 +30,7 @@ public class projectileFire : MonoBehaviour
     void Update()
     {
       
-            if (Input.GetKey(KeyCode.RightControl))
+            if (Input.GetKeyDown(KeyCode.RightControl))
             {
                 Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
             }
