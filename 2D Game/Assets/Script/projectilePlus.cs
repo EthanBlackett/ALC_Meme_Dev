@@ -20,17 +20,6 @@ public class projectilePlus : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, 0f);
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-        if (other.tag == "Enemy"){
-            Destroy(other);
-            Destroy(gameObject);
-        }
-        if (other.tag == "ground") {
-            Destroy(gameObject);
-        }
-	}
-
 	// Update is called once per frame
 	void Update () {
         lifetime--;

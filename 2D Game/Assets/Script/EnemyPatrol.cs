@@ -24,6 +24,10 @@ public class EnemyPatrol : MonoBehaviour {
 
     public Transform EdgeCheck;
 
+    //health stuff
+    public int enemyhp;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +52,18 @@ public class EnemyPatrol : MonoBehaviour {
             transform.localScale = new Vector3(0.27f, 0.27f, 1f);
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
+        if (enemyhp <= 0 ) {
+            Destroy(gameObject);
+        }
     }
-}
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "projectile")
+        {
+            enemyhp -= 1;
+            Destroy(other.GetComponent<GameObject>());
+        }
+	}
+
+}
