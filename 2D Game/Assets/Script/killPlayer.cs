@@ -20,6 +20,5 @@ public class KillPlayer : MonoBehaviour
         {
             levelManager.RespawnPlayer();
         }
-
     }
 }

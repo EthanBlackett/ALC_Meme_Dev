@@ -19,5 +19,4 @@ public class projectileScript : MonoBehaviour
             Object.Destroy(other);
         }
     }
-
 }

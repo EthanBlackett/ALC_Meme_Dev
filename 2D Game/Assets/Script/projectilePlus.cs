@@ -27,4 +27,13 @@ public class projectilePlus : MonoBehaviour {
             Destroy(gameObject);
         }
 	}
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            GameObject tempDie = other.GetComponent<GameObject>();
+            Destroy(other.gameObject);
+        }
+    }
 }

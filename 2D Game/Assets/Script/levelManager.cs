@@ -27,7 +27,7 @@ public class levelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //PC = FindObjectOfType<Rigidbody2D>();
+        PC = GameObject.Find("PC").GetComponent<Rigidbody2D>();
 	}
 
     public void RespawnPlayer() {
