@@ -3,6 +3,7 @@ guid: 561eb7c9bd345487bbb764b10033b36c
 TextureImporter:
   fileIDToRecycleName:
     21300000: topGrass
+    21300002: dirt
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -98,6 +99,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f10187ddf121a4abdbafe2e8ba5d1dde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69
+        width: 32
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a785214281b524d3c8d09a8cac946756
       vertices: []
       indices: 
       edges: []
