@@ -234,10 +234,10 @@ TextureImporter:
       name: coin2
       rect:
         serializedVersion: 2
-        x: 76
+        x: 64
         y: 0
-        width: 40
-        height: 57
+        width: 64
+        height: 61
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: coin3
       rect:
         serializedVersion: 2
-        x: 140
+        x: 128
         y: 0
-        width: 40
-        height: 57
+        width: 64
+        height: 61
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
